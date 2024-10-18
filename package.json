@@ -1,0 +1,72 @@
+{
+  "name": "sdusd-dx-component-library",
+  "version": "0.1.3",
+  "description": "SDUSD MS Entra login/logout component library",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerjaffe/sdusd-dx-component-library.git"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf types && rm -rf dist-npm",
+    "build": "tsc",
+    "rollup": "rollup -c",
+    "deploy": "npm run clean && npm run build && npm run rollup && npm publish",
+    "test-deploy": "npm run clean && npm run build && npm run rollup && npm publish --dry-run",
+    "storybook": "storybook dev -p 3000",
+    "build-storybook": "storybook build"
+  },
+  "author": "Roger Jaffe <rogerjaffe@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.9.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-image": "^3.0.3",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@storybook/addon-a11y": "^8.3.5",
+    "@storybook/addon-essentials": "^8.3.5",
+    "@storybook/addon-interactions": "^8.3.5",
+    "@storybook/addon-links": "^8.3.5",
+    "@storybook/addon-onboarding": "^8.3.5",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.3.5",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^8.3.5",
+    "@storybook/react-webpack5": "^8.3.5",
+    "@storybook/test": "^8.3.5",
+    "@types/react": "^18.3.11",
+    "css-loader": "^7.1.2",
+    "prettier": "^3.3.3",
+    "rollup": "^4.24.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-image": "^1.0.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "sass": "^1.79.5",
+    "sass-loader": "^16.0.2",
+    "storybook": "^8.3.5",
+    "style-loader": "^4.0.0",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.3"
+  },
+  "main": "dist-npm/cjs/index.js",
+  "module": "dist-npm/esm/index.js",
+  "type": "module",
+  "files": [
+    "dist-npm"
+  ],
+  "types": "dist-npm/index.d.ts",
+  "dependencies": {
+    "devextreme": "24.1.6",
+    "devextreme-react": "24.1.6"
+  },
+  "peerDependencies": {
+    "@azure/msal-browser": "^3.26.1",
+    "@azure/msal-react": "^2.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
