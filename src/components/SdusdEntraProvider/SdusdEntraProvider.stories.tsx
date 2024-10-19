@@ -21,7 +21,7 @@ const TestComponent = () => {
     <div>
       <h4>TestComponent</h4>
       <h6>
-        {entraData.user?.displayName} {entraData.user?.employeeId}
+        {entraData?.user?.displayName} {entraData?.user?.employeeId}
       </h6>
       <AuthenticatedTemplate>
         <SdusdEntraLogout logoutType="popup" />
@@ -37,9 +37,9 @@ const TestComponent = () => {
 
 const meta: Meta<typeof SdusdEntraProvider> = {
   component: SdusdEntraProvider,
-  // argTypes: {
-  //   children: <TestComponent />,
-  // },
+  argTypes: {
+    children: <TestComponent />,
+  },
   // decorators: [
   //   (story) => <MsalProvider instance={msalInstance}>{story()}</MsalProvider>,
   // ],

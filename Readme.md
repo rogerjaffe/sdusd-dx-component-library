@@ -44,3 +44,8 @@ interface SdusdEntraLoginProps {
 `onSuccess` is optional and is a callback function that is called when the user successfully logs in.
 `onFailure` is optional and is a callback function that is called when the user fails to log in.
 
+##### References
+
+* [Provider design patterns](https://medium.com/@vitorbritto/react-design-patterns-provider-pattern-b273ba665158)
+* [React Context API](https://reactjs.org/docs/context.html)
+* [Entra authorization tokens](https://learn.microsoft.com/en-us/entra/identity-platform/access-tokens)
