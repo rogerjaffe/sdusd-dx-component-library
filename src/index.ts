@@ -9,4 +9,6 @@ export {
   SdusdEntraLogout,
   SdusdEntraLogin,
   useEntraAuthAndUser,
+  UserType,
+  AuthContextType,
 } from "./components";

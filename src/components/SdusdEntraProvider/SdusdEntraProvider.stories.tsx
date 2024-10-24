@@ -33,16 +33,8 @@ const TestComponent = () => {
   );
 };
 
-// const msalInstance = getMsalInstance(application_id, directory_id, redirectURI);
-
 const meta: Meta<typeof SdusdEntraProvider> = {
   component: SdusdEntraProvider,
-  argTypes: {
-    children: <TestComponent />,
-  },
-  // decorators: [
-  //   (story) => <MsalProvider instance={msalInstance}>{story()}</MsalProvider>,
-  // ],
 };
 
 export default meta;

@@ -3,7 +3,7 @@ import { useIsAuthenticated, useMsal } from "@azure/msal-react";
 import { AuthenticationResult } from "@azure/msal-browser";
 import { graphConfig, loginRequest } from "../../common";
 
-export type UserResult = {
+export type UserType = {
   businessPhones: string[];
   displayName: string;
   givenName: string;
@@ -20,7 +20,7 @@ export type UserResult = {
 
 export type AuthContextType = {
   auth: AuthenticationResult | null;
-  user: UserResult | null;
+  user: UserType | null;
   accessToken: string;
 };
 

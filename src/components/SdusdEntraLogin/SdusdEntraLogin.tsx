@@ -9,10 +9,8 @@ import ResponsiveBox, {
 import { useMsal } from "@azure/msal-react";
 import happyStudents from "./happy-students.jpg";
 import aiLogo from "./ai-logo.png";
-import "devextreme/dist/css/dx.light.css";
 import "./SdusdEntraLogin.css";
 import { loginRequest } from "../../common";
-import { PublicClientApplication } from "@azure/msal-browser";
 
 export interface SdusdEntraLoginProps {
   showFamilyMemberSignin?: boolean;
@@ -20,15 +18,6 @@ export interface SdusdEntraLoginProps {
   onSuccess?: (auth: any) => void;
   onFailure?: (err: any) => void;
 }
-
-// const getMsalConfig = (application_id: string, directory_id: string) =>
-//   msalConfig(application_id, directory_id);
-//
-// export const getMsalInstance = (application_id: string, directory_id: string) =>
-//   new PublicClientApplication(getMsalConfig(application_id, directory_id));
-
-// Wrap the MsalProvider component around the App component:
-// <MsalProvider instance={getMsalInstance(application_id, directory_id)}>
 
 export const SdusdEntraLogin = (props: SdusdEntraLoginProps) => {
   const {

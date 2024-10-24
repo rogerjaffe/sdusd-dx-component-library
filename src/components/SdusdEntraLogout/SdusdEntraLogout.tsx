@@ -1,10 +1,7 @@
 import React from "react";
-import "devextreme/dist/css/dx.light.css";
 import Button from "devextreme-react/button";
 import "./SdusdEntraLogout.css";
 import { useMsal } from "@azure/msal-react";
-import { msalConfig } from "../SdusdEntraLogin/authConfig";
-import { PublicClientApplication } from "@azure/msal-browser";
 
 export interface SdusdEntraLogoutProps {
   logoutType: "popup" | "redirect";
