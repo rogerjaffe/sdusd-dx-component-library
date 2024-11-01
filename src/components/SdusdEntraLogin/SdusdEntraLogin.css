@@ -1,5 +1,5 @@
 .happy-students-image {
-    width: 100%;
+    width: 80%;
     object-fit: cover;
 }
 .format-image {
@@ -12,3 +12,19 @@
 button {
   font-size: 60px;
 }
+
+.valign {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.login-button-container {
+  text-align: center;
+  margin-bottom: 10px;
+
+  .btn {
+    margin: 10px;
+    width: 100%;
+  }
+}
+

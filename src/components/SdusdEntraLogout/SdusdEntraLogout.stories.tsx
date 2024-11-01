@@ -1,10 +1,10 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { MsalProvider } from "@azure/msal-react";
-
 import SdusdEntraLogout from "./SdusdEntraLogout";
 import { PublicClientApplication } from "@azure/msal-browser";
 import { msalConfig } from "../../common";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import {
   application_id,
@@ -29,7 +29,7 @@ type Story = StoryObj<typeof SdusdEntraLogout>;
 export const Popup: Story = {
   args: {
     logoutType: "popup",
-    logoutRedirectUri: "/",
+    // logoutRedirectUri: "/",
   },
 };
 

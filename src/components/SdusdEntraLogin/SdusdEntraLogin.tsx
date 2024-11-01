@@ -1,11 +1,4 @@
 import React from "react";
-import Button from "devextreme-react/button";
-import ResponsiveBox, {
-  Row,
-  Col,
-  Item,
-  Location,
-} from "devextreme-react/responsive-box";
 import { useMsal } from "@azure/msal-react";
 import happyStudents from "./happy-students.jpg";
 import aiLogo from "./ai-logo.png";
@@ -53,45 +46,37 @@ export const SdusdEntraLogin = (props: SdusdEntraLoginProps) => {
   };
 
   return (
-    <ResponsiveBox>
-      <Row />
-      <Col />
-      <Col />
-
-      <Item>
-        <Location row={0} col={0} />
-        <img src={happyStudents} />
-      </Item>
-      <Item>
-        <Location row={0} col={1} />
-        <ResponsiveBox>
-          <Row></Row>
-          <Row></Row>
-          <Row></Row>
-          <Col ratio={0.5}></Col>
-          <Col ratio={2}></Col>
-          <Col ratio={0.5}></Col>
-          <Item>
-            <Location row={1} col={1} />
+    <div className="card">
+      <div className="card-body">
+        <div className="row">
+          <div className="col-md-6 col-lg-4 offset-lg-2 d-none d-md-block">
+            <img src={happyStudents} className="happy-students-image" />
+          </div>
+          <div className="col-md-4 offset-md-1 col-lg-4 valign">
             <div className="format-image">
               <img src={aiLogo} style={{ width: "200px" }} />
             </div>
-            <Button
-              text="Staff / Student signin"
-              type="default"
-              onClick={handleLogin}
-            />
-            {showFamilyMemberSignin && (
-              <Button
-                text="Family member signin"
-                type="default"
-                onClick={() => alert("Family login clicked")}
-              />
-            )}
-          </Item>
-        </ResponsiveBox>
-      </Item>
-    </ResponsiveBox>
+            <div className="login-button-container">
+              <div className="login-button">
+                <div className="btn btn-primary" onClick={handleLogin}>
+                  Staff / Student signin
+                </div>
+              </div>
+              {showFamilyMemberSignin ? (
+                <div className="login-button">
+                  <div
+                    className="btn btn-primary"
+                    onClick={() => alert("Family login clicked")}
+                  >
+                    Family member signin
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

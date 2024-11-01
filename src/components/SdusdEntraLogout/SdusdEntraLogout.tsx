@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "devextreme-react/button";
 import "./SdusdEntraLogout.css";
 import { useMsal } from "@azure/msal-react";
 
@@ -7,12 +6,6 @@ export interface SdusdEntraLogoutProps {
   logoutType: "popup" | "redirect";
   logoutRedirectUri?: string;
 }
-
-// const getMsalConfig = (application_id: string, directory_id: string) =>
-//   msalConfig(application_id, directory_id);
-//
-// export const getMsalInstance = (application_id: string, directory_id: string) =>
-//   new PublicClientApplication(getMsalConfig(application_id, directory_id));
 
 export const SdusdEntraLogout = (props: SdusdEntraLogoutProps) => {
   const { instance } = useMsal();
@@ -39,7 +32,11 @@ export const SdusdEntraLogout = (props: SdusdEntraLogoutProps) => {
     }
   };
 
-  return <Button text="Logout" type="default" onClick={() => handleLogout()} />;
+  return (
+    <div className="btn btn-primary" onClick={() => handleLogout()}>
+      Logout
+    </div>
+  );
 };
 
 export default SdusdEntraLogout;

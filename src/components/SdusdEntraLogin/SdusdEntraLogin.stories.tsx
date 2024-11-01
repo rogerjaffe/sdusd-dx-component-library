@@ -4,12 +4,12 @@ import { MsalProvider } from "@azure/msal-react";
 import SdusdEntraLogin from "./SdusdEntraLogin";
 import { msalConfig } from "../../common";
 import { PublicClientApplication } from "@azure/msal-browser";
-
 import {
   application_id,
   directory_id,
   redirectURI,
 } from "../../../entraCredentials";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const msalInstance = new PublicClientApplication(
   msalConfig(application_id, directory_id, redirectURI),

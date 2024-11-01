@@ -1,6 +1,6 @@
 {
   "name": "sdusd-dx-component-library",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "SDUSD MS Entra login/logout component library",
   "repository": {
     "type": "git",
@@ -60,8 +60,7 @@
   ],
   "types": "dist-npm/index.d.ts",
   "dependencies": {
-    "devextreme": "24.1.6",
-    "devextreme-react": "24.1.6"
+    "bootstrap": "^5.3.3"
   },
   "peerDependencies": {
     "@azure/msal-browser": "^3.26.1",
