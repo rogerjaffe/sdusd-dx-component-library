@@ -5,11 +5,12 @@
 
 .ai-login-container {
   margin-top: 30px !important;
+  height: 85vh;
 }
 
 .login-button-container .btn {
   width: 100%;
-  font-size:1.5rem;
+  font-size: 1.4rem !important;
   border-radius: 30px;
   font-family: "Helvetica Neue", "Segoe UI", helvetica, verdana, sans-serif
 }

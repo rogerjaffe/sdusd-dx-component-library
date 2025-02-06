@@ -48,7 +48,7 @@ export const SdusdEntraLogin = (props: SdusdEntraLoginProps) => {
 
   return (
     <div className="row ai-login-container">
-      <div className="col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 valign">
+      <div className="my-auto col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 valign">
         <div className="card" style={{ margin: "20px" }}>
           <div className="card-header text-center">
             <div className="mt-3">
