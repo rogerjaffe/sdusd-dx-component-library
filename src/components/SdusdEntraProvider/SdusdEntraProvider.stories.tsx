@@ -1,6 +1,6 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { SdusdEntraProvider, useEntraAuthAndUser } from "./index";
+import { SdusdEntraProvider, useEntraAuth } from "./index";
 import { SdusdEntraLogin, SdusdEntraLogout } from "../index";
 import {
   AuthenticatedTemplate,
@@ -15,7 +15,7 @@ import {
 } from "../../../entraCredentials";
 
 const TestComponent = () => {
-  const entraData = useEntraAuthAndUser();
+  const entraData = useEntraAuth();
   console.log(entraData);
   return (
     <div>

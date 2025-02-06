@@ -3,7 +3,7 @@ export { default as SdusdEntraLogout } from "./SdusdEntraLogout";
 export { default as SdusdEntraLogin } from "./SdusdEntraLogin";
 export {
   SdusdEntraProvider,
-  useEntraAuthAndUser,
+  useEntraAuth,
   UserType,
   AuthContextType,
 } from "./SdusdEntraProvider";

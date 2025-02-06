@@ -30,7 +30,7 @@ const AuthContext = createContext<AuthContextType>({
   accessToken: "",
 });
 
-export const useEntraAuthAndUser = () => {
+export const useEntraAuth = () => {
   return useContext(AuthContext);
 };
 

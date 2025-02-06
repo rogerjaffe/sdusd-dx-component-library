@@ -28,8 +28,6 @@ export const SdusdEntraProvider = ({
     setInstance(msalInstance);
   }, [application_id, directory_id, redirectURI]);
 
-  console.log(instance);
-
   if (instance) {
     return (
       <MsalProvider instance={instance}>

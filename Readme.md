@@ -18,6 +18,97 @@ declare const SdusdEntraProvider: ({ application_id, directory_id, children, }: 
 `application_id` and `directory_id` are required props that are provided by the SDUSD Entra team.
 `redirectURI` is the URI that the user will be redirected to after logging in or out.
 
+`useEntraAuth` hook will return the Entra context and user information. This returns an object with the following properties:
+
+```
+{
+  accessToken: string;
+  auth: {
+    accessToken: string;
+    account: {
+      authorityType: 'MSSTS';
+      environment: 'login.windows.net',
+      homeAccountId: 'UUID',
+      idToken: 'string',
+      idTokenClaims: {
+        aud: 'string',
+        exp: 1234567890,
+        groups: ['string', 'string', ...]
+        iat: 1234567890,
+        iss: 'string',
+        name: 'string',
+        nbf: 1234567890,
+        nonce: 'string'
+        oid: 'UUID',
+        preferred_username: 'xxx@sandi.net',
+        rh: 'string',
+        sub: 'UUID',
+        tid: 'UUID',
+        uti: 'string',
+        ver: '1.0',
+        wids: ['string', 'string', ...]
+      },
+      localAccountId: 'UUID',
+      name: 'string',
+      nativeAccountId: 'UUID',
+      tenantId: 'UUID',
+      tenantProfiles 'Map',
+      username: 'string'
+    },
+    authority: 'URL'
+    cloudGraphHostName: 'string'
+    code: 'unknown',
+    correlationId: 'UUID',
+    expiresOn: 'Date',
+    extExpiresOn: 'Date',
+    familyId: 'string',
+    fromCache: 'boolean',
+    fromNativeBroker: 'boolean',
+    idToken: 'string',
+    idTokenClaims: {
+      aud: 'string',
+      exp: 1234567890,
+      groups: ['string', 'string', ...]
+      iat: 1234567890,
+      iss: 'string',
+      name: 'string',
+      nbf: 1234567890,
+      nonce: 'string'
+      oid: 'UUID',
+      preferred_username: 'xxx@sandi.net',
+      rh: 'string',
+      sub: 'UUID',
+      tid: 'UUID',
+      uti: 'string',
+      ver: '1.0',
+      wids: ['string', 'string', ...]
+    },
+    msGraphHost: 'string',
+    refreshOn: 'Date',
+    requestId: 'string',
+    scopes: 'string[]',
+    tenantId: 'UUID',
+    tokenType: 'string',
+    uniqueId: 'string'
+  },
+  user: {
+    @odata.context: 'URL',
+    businessPhones: ['string', 'string', ...],
+    displayName: 'string',
+    employeeId: 'string',
+    givenName: 'string',
+    id: 'string',
+    jobTitle: 'string',
+    mail: 'string',
+    mobilePhone: null,
+    officeLocation: 'string',
+    preferredLanguage: null,
+    surname: 'string',
+    userPrincipalName: 'string (email)'
+  }
+}
+```
+
 ### SdusdEntraLogin
 
 ```typescript

@@ -1,6 +1,2 @@
 export { SdusdEntraProvider } from "./SdusdEntraProvider";
-export {
-  useEntraAuthAndUser,
-  UserType,
-  AuthContextType,
-} from "./AuthAndUserProvider";
+export { useEntraAuth, UserType, AuthContextType } from "./AuthAndUserProvider";
