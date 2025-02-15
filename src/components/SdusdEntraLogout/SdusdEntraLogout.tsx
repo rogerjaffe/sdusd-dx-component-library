@@ -5,6 +5,8 @@ import { useMsal } from "@azure/msal-react";
 export interface SdusdEntraLogoutProps {
   logoutType: "popup" | "redirect";
   logoutRedirectUri?: string;
+  beforeLogout?: () => void;
+  afterLogout?: () => void;
 }
 
 export const SdusdEntraLogout = (props: SdusdEntraLogoutProps) => {
@@ -12,6 +14,7 @@ export const SdusdEntraLogout = (props: SdusdEntraLogoutProps) => {
   const { logoutType, logoutRedirectUri = "http://localhost:3000" } = props;
 
   const handleLogout = () => {
+    props.beforeLogout ? props.beforeLogout() : null;
     if (logoutType === "popup") {
       instance
         .logoutPopup({
@@ -20,6 +23,7 @@ export const SdusdEntraLogout = (props: SdusdEntraLogoutProps) => {
         })
         .then(() => {
           console.log("logged out popup");
+          props.afterLogout ? props.afterLogout() : null;
         });
     } else if (logoutType === "redirect") {
       instance
@@ -28,6 +32,7 @@ export const SdusdEntraLogout = (props: SdusdEntraLogoutProps) => {
         })
         .then(() => {
           console.log("logged out redirect");
+          props.afterLogout ? props.afterLogout() : null;
         });
     }
   };
