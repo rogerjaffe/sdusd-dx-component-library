@@ -2,6 +2,13 @@
 
 #### Includes components for SDUSD Entra login and logout with React hooks
 
+##### Deployment
+
+* On dev machine bump version in package.json, then commit and push to the `master` branch
+* Run `npm run deploy` to deploy the library to `npmjs.org`
+* Update the `sdusd-action-insights-ui` `package.json` file with the new version of this library 
+* Deploy the new UI version
+
 ### SdusdEntraProvider
 
 A React provider component that must wrap your application to provide the necessary context for the MS Entra state.
