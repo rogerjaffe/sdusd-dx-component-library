@@ -1,7 +1,7 @@
 import React from "react";
 import { useMsal } from "@azure/msal-react";
-import happyStudents from "./happy-students.jpg";
-import aiLogo from "./ai-logo.png";
+// import happyStudents from "./happy-students.jpg";
+// import aiLogo from "./ai-logo.png";
 import "./SdusdEntraLogin.css";
 import { loginRequest } from "../../common";
 import sdusdLogo from "./sdusd-logo.png";
@@ -26,6 +26,7 @@ export const SdusdEntraLogin = (props: SdusdEntraLoginProps) => {
       instance
         .loginPopup(loginRequest)
         .then(async (auth) => {
+          console.log(auth);
           // const user = await callMsGraph(auth.accessToken);
           onSuccess && onSuccess(auth);
         })

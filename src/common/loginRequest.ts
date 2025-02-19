@@ -10,7 +10,7 @@
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
 const loginRequest = {
-  scopes: ["User.Read"],
+  scopes: ["User.Read","offline_access"],
 };
 
 export default loginRequest;
